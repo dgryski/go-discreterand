@@ -11,7 +11,7 @@ import (
 	"math/rand"
 )
 
-type Vose struct {
+type AliasTable struct {
 	rnd   *rand.Rand
 	alias []int
 	prob  []float64
@@ -31,11 +31,11 @@ func (w *worklist) pop() int {
 }
 
 // NewAlias constructs a Vose that will generate the discrete distribution given in probabilities.
-func NewAlias(probabilities []float64, src rand.Source) Vose {
+func NewAlias(probabilities []float64, src rand.Source) AliasTable {
 
 	n := len(probabilities)
 
-	v := Vose{}
+	v := AliasTable{}
 
 	v.alias = make([]int, n)
 	v.prob = make([]float64, n)
@@ -85,7 +85,7 @@ func NewAlias(probabilities []float64, src rand.Source) Vose {
 }
 
 // Next returns the next random value from the discrete distribution
-func (v Vose) Next() int {
+func (v *AliasTable) Next() int {
 
 	n := len(v.alias)
 
