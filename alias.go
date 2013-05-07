@@ -25,8 +25,9 @@ func (w *worklist) push(i int) {
 }
 
 func (w *worklist) pop() int {
-	n := (*w)[len(*w)-1]
-	(*w) = (*w)[:len(*w)-1]
+	l := len(*w) - 1
+	n := (*w)[l]
+	(*w) = (*w)[:l]
 	return n
 }
 
