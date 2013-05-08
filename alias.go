@@ -31,7 +31,7 @@ func (w *worklist) pop() int {
 	return n
 }
 
-// NewAlias constructs a Vose that will generate the discrete distribution given in probabilities.
+// NewAlias constructs an AliasTable  that will generate the discrete distribution given in probabilities.
 func NewAlias(probabilities []float64, src rand.Source) AliasTable {
 
 	n := len(probabilities)
