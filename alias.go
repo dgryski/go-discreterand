@@ -2,6 +2,9 @@
    Package discreterand provides an implementation of Vose's alias method for
    choosing elements from a discrete distribution.
 
+   Copyright (c) 2013 Damian Gryski <damian@gryski.com>
+   Licensed under the GPLv3 or, at your option, any later version.
+
    For a full description of the algorithm, see
    http://www.keithschwarz.com/darts-dice-coins/
 */
