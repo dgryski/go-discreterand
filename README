@@ -2,6 +2,6 @@ This package is an implementation of Vose's alias method for choosing elements
 from a discrete distribution.
 
 Copyright (c) 2013 Damian Gryski <damian@gryski.com>
-Licensed under the GPLv3 or, at your option, any later version.
+Licensed under the MIT license.
 
 For library documentation, please see http://godoc.org/github.com/dgryski/go-discreterand

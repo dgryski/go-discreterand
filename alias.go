@@ -3,7 +3,7 @@
    choosing elements from a discrete distribution.
 
    Copyright (c) 2013 Damian Gryski <damian@gryski.com>
-   Licensed under the GPLv3 or, at your option, any later version.
+   Licensed under the MIT license.
 
    For a full description of the algorithm, see
    http://www.keithschwarz.com/darts-dice-coins/
