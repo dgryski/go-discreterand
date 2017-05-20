@@ -1,12 +1,13 @@
+// Copyright (c) 2013 Damian Gryski <damian@gryski.com>
+//   Licensed under the MIT license.
+
+// Package discreterand provides constant time sampling from a discrete distribution
 /*
-   Package discreterand provides an implementation of Vose's alias method for
-   choosing elements from a discrete distribution.
 
-   Copyright (c) 2013 Damian Gryski <damian@gryski.com>
-   Licensed under the MIT license.
+This is an implementation of Vose's alias method for
+choosing elements from a discrete distribution.
 
-   For a full description of the algorithm, see
-   http://www.keithschwarz.com/darts-dice-coins/
+For a full description of the algorithm, see http://www.keithschwarz.com/darts-dice-coins/
 */
 package discreterand
 
@@ -14,6 +15,7 @@ import (
 	"math/rand"
 )
 
+// AliasTable is a discrete distribution
 type AliasTable struct {
 	rnd   *rand.Rand
 	alias []int
@@ -93,7 +95,7 @@ func (v *AliasTable) Next() int {
 
 	n := len(v.alias)
 
-	i := int(v.rnd.Intn(n))
+	i := v.rnd.Intn(n)
 
 	if v.rnd.Float64() < v.prob[i] {
 		return i
