@@ -37,6 +37,7 @@ func (w *worklist) pop() int {
 }
 
 // NewAlias constructs an AliasTable  that will generate the discrete distribution given in probabilities.
+// The probabilities array should sum to 1.
 func NewAlias(probabilities []float64, src rand.Source) AliasTable {
 
 	n := len(probabilities)
